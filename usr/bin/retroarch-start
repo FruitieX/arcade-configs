@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# start retroarch in correct path
+# retroarch-cabinet is a custom fork which removes all menu options
+# except for quit, see https://github.com/FruitieX/RetroArch-Cabinet
+# use /usr/bin/retroarch-config when you wish to change retroarch
+# configurations
+
+cd /home/taflan/src/RetroArch
+/usr/bin/retroarch-cabinet "$@"

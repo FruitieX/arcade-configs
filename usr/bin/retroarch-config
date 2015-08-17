@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# start vanilla retroarch in correct path for configuring purposes
+
+cd /home/taflan/src/RetroArch
+/usr/bin/retroarch "$@"

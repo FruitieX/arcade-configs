@@ -1,6 +1,6 @@
-#!/bin/zsh
+#!/bin/bash
 
-# make sure we're in the correct directory
+# make sure we're in the repo root
 cd "$(dirname $0)"
 CWD=$(pwd)
 

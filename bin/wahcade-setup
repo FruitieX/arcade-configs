@@ -2,5 +2,4 @@
 
 #cd /usr/local/share/games/wahcade/devel/
 cd $HOME/wahcade-devel/
-./wahcade-setup.py
-
+python2 ./wahcade-setup.py

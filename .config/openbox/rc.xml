@@ -187,19 +187,19 @@
       <action name="ToggleFullscreen"/>
     </keybind>
     <!-- Launch task manager on Ctrl + Alt + Del-->
-    <keybind key="A-F2">
+    <keybind key="A-Enter">
       <action name="Execute">
-        <command>lxtask</command>
+        <command>urxvt</command>
       </action>
     </keybind>
-    <keybind key="C-A-T">
-      <action name="Execute">
-        <command>lxterminal</command>
+    <keybind key="F2">
+      <action name="ShowMenu">
+          <menu>root-menu</menu>
       </action>
     </keybind>
     <keybind key="F3">
-      <action name="ShowMenu">
-          <menu>root-menu</menu>
+      <action name="Execute">
+      <command>bash ~/bin/toggle-controllers.sh xbox360</command>
       </action>
     </keybind>
     <keybind key="KP_Add">
@@ -209,13 +209,28 @@
     </keybind>
     <keybind key="F12">
       <action name="Execute">
-        <command>bash ~/bin/toggle-controllers.sh</command>
+        <command>killall -9 openbox</command>
+      </action>
+    </keybind>
+    <keybind key="Escape">
+      <action name="Execute">
+        <command>killall -9 dolphin-emu</command>
       </action>
     </keybind>
     <keybind key="KP_Subtract">
       <action name="Execute">
         <command>bash ~/bin/volume.sh d</command>
       </action>
+    </keybind>
+    <keybind key="A-Tab">
+        <action name="NextWindow">
+            <dialog>icons</dialog>
+        </action>
+    </keybind>
+    <keybind key="A-S-Tab">
+        <action name="PreviousWindow">
+            <dialog>icons</dialog>
+        </action>
     </keybind>
     <!-- Launch a terminal on Ctrl + Alt + T-->
   </keyboard>

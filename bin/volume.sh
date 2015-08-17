@@ -2,11 +2,8 @@
 
 if [[ $1 == "u" ]]; then
 	echo volume up
-	amixer set Master 2dB+
+    pactl set-sink-volume @DEFAULT_SINK@ +4%; paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
 elif [[ $1 == "d" ]]; then
 	echo volume down
-	amixer set Master 2dB-
+    pactl set-sink-volume @DEFAULT_SINK@ -4%; paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
 fi
-
-ogg123 /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
-

@@ -1,10 +1,7 @@
-#!/bin/zsh
+#!/bin/bash
 
 # recursively symlink all files from paths in this array
-FILES=( bin/ .config .dolphin-gc .dolphin-gcwii .dolphin-wiisideways .dolphin-wiinunchuk .fceux .pcsx .wahcade .zsnes )
-
-# symlink these directories
-DIRS=()
+FILES=( bin/ .config .dolphin-gc .dolphin-gcwii .dolphin-wiisideways .dolphin-wiinunchuk .local .wahcade )
 
 # cd to root of git repo
 cd "$(dirname $0)"
@@ -57,26 +54,6 @@ find "${FILES[@]}" -type f -print0 | while read -d $'\0' FILE; do
 
 	echo "$FILE => $HOME/$FILE"
 	$DRYRUN ln -sr "$FILE" "$HOME/$FILE"
-done
-
-for DIR in $DIRS; do
-
-	# create parent directies if they do not exist
-	if [ ! -d "$(dirname "$HOME/$DIR")" ]; then
-		$DRYRUN mkdir -p $(dirname "$HOME/$DIR")
-	fi
-
-	# if dir is a symlink, remove it and later make a new symlink
-	if [ -L "$HOME/$DIR" ]; then
-		$DRYRUN rm "$HOME/$DIR"
-	# elif dir already exists, make a backup
-	elif [ -d "$HOME/$DIR" ]; then
-		$DRYRUN mv -f "$HOME/$DIR" "$HOME/$DIR.bak"
-		echo "backed up $HOME/$DIR => $HOME/$DIR.bak"
-	fi
-
-	echo "$DIR => $HOME/$DIR"
-	$DRYRUN ln -sr "$DIR" "$HOME/$DIR"
 done
 
 echo "all done!"

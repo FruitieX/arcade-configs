@@ -1,15 +1,13 @@
 #!/bin/bash
 
-external_controllers=$(cat ~/controller_state)
-
-if [[ $external_controllers == 0 ]]; then
-	~/arcade-configs/external-controller-symlink.sh 1
-	echo 1 > ~/controller_state
-	killall -9 python dolphin-emu fceux zsnes pcsx vba vbam dgen mupen64plus mame # TODO: pids! groups?
-	wahcade &
+if [[ $1 == 'xbox360' ]]; then
+    # enable external controllers
+	bash ~/arcade-configs/external-controller-symlink.sh 1
+	killall -9 python2 retroarch dolphin-emu
+	DISPLAY=:0 wahcade &
 else
-	~/arcade-configs/external-controller-symlink.sh 0
-	echo 0 > ~/controller_state
-	killall -9 python dolphin-emu fceux zsnes pcsx vba vbam dgen mupen64plus mame # TODO: pids! groups?
-	wahcade &
+    # enable arcade controllers
+	bash ~/arcade-configs/external-controller-symlink.sh 0
+	killall -9 python2 retroarch dolphin-emu
+	DISPLAY=:0 wahcade &
 fi

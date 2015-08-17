@@ -22,10 +22,10 @@ True
  1
  0
  52223
-Sans
+Pixeltype
 True
 False
- 24.0
+ 40
  2
  339
  13
@@ -35,10 +35,10 @@ True
  0
  0
  52223
-Sans
+Pixeltype
 True
 False
- 24.0
+ 40
  2
  889
  13
@@ -48,10 +48,10 @@ True
  1
  0
  12961221
-Sans
+Pixeltype
 False
 False
- 16.0
+ 24
  2
  346
  131
@@ -74,10 +74,10 @@ True
  1
  8421504
  16777215
-Sans
-True
+Pixeltype
 False
- 9.75
+False
+ 20
  2
  1044
  131
@@ -204,10 +204,10 @@ True
  1
  0
  21503
-Sans
-True
+Pixeltype
 False
- 16.0
+False
+ 28
  2
  1045
  743
@@ -217,10 +217,10 @@ True
  1
  0
  12961221
-Sans
-True
+Pixeltype
 False
- 16.0
+False
+ 28
  2
  1045
  783
@@ -230,10 +230,10 @@ True
  1
  0
  12961221
-Sans
-True
+Pixeltype
 False
- 16.0
+False
+ 28
  2
  1045
  823
@@ -243,10 +243,10 @@ True
  1
  0
  12961221
-Sans
-True
+Pixeltype
 False
- 16.0
+False
+ 28
  2
  1045
  863
@@ -256,10 +256,10 @@ True
  1
  0
  12961221
-Sans
-True
+Pixeltype
 False
- 16.0
+False
+ 28
  2
  1045
  903
@@ -269,10 +269,10 @@ True
  1
  0
  12961221
-Sans
-True
+Pixeltype
 False
- 16.0
+False
+ 28
  2
  1045
  943
@@ -294,7 +294,7 @@ False
  305
  330
  0
- options.png
+ 
  1
  10485760
  16777215
@@ -353,7 +353,7 @@ False
  337
  260
  0
- message.png
+ 
 True
  1
  3289650
